@@ -1,20 +1,6 @@
 
 
-"""
-
-    ========================= Comentarios =========================
-    "O código abaixo é um exemplo de um menu simples em Python.
-    Ele utiliza funções para organizar o código e criar um menu interativo.
-
-    Funções explicadas:
-
-    def define uma função de utilização unica para aquela unica variavel
-    while cria um laço infinito, onde ele não para até que uma condição seja atendida"
-
-
-
-
-"""
+import json
 
 # Variável global para armazenar o login do usuário
 usuario_logado = None
