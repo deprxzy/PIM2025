@@ -60,16 +60,29 @@ def login():
 def listar_cursos():
         """Função para listar todos os cursos disponíveis."""
         while True:
+
             print("\n=== Listar Todos os Cursos ===")
             print("1. Curso de Python")
-            print("2. ")
-            print("3. ")
-            print("4. ")
+            print("2. Curso de Front-End")
+            print("3. Curso de Banco de Dados")
+            print("4. Curso de Desenvolvimento Web com Flask")
             print("0. Voltar ao Menu Principal")
-            escolha = input("Escolha uma opção: ").strip()
-            if escolha == "1":
+
+            try:
+                escolha = int(input("Escolha uma opção: ").strip())
+            except ValueError:
+                print("Entrada inválida. Por favor, digite um número.")
+                continue
+        
+            if escolha == 1:
                 print("Curso de Python: Aprenda a programar em Python do básico ao avançado.")
-            elif escolha == "0":
+            elif escolha == 2:
+                print("Curso de Front-End: Crie interfaces modernas para sites e sistemas usando tecnologias essenciais do desenvolvimento web.")
+            elif escolha == 3:
+                print("Curso de Banco de Dados: Aprenda a modelar, criar e manipular bancos de dados com SQL.")
+            elif escolha == 4:
+                print("Curso de Desenvolvimento Web com Flask: Crie sites e aplicações com o framework Flask, usando Python.")
+            elif escolha == 0:
                 print("Voltando ao Menu Principal...")
                 break
             else:
