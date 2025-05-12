@@ -68,12 +68,11 @@ def listar_cursos():
             print("4. Curso de Desenvolvimento Web com Flask")
             print("0. Voltar ao Menu Principal")
 
-            try:
+            try: # caso o usuário digite algo que não seja um número, vamos capturar o erro e mostrar uma mensagem amigável, evitando que o programa trave.
                 escolha = int(input("Escolha uma opção: ").strip())
             except ValueError:
                 print("Entrada inválida. Por favor, digite um número.")
                 continue
-        
             if escolha == 1:
                 print("Curso de Python: Aprenda a programar em Python do básico ao avançado.")
             elif escolha == 2:
@@ -111,11 +110,13 @@ def menu_cursos():
 def cadastro_cursos():
     """Função para solicitar o cadastro de novos cursos."""
     print("=== Solicitar Cadastro de Cursos ===")
-    curso_nome = input("Digite o nome do curso que deseja cadastrar: ").strip()
-    if curso_nome:
-        print(f"Solicitação de cadastro do curso '{curso_nome}' enviada com sucesso!")
-    else:
-        print("O nome do curso não pode estar vazio. Tente novamente.")
+    while True: 
+        curso_nome = input("Digite o nome do curso que deseja cadastrar: ").strip()
+        if curso_nome:
+            print(f"Solicitação de cadastro do curso '{curso_nome}' enviada com sucesso!")
+            break
+        else:
+            print("O nome do curso não pode estar vazio. Tente novamente.")
 
 def ultimo_curso_assistido():
     """Função para exibir o último curso assistido."""
